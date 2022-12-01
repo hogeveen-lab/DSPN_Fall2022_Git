@@ -124,7 +124,8 @@ df <- df %>%
 
 ```{r item2}
 
-#### code for item 2 ####
+ggplot(df,aes(x = 'a thing', y = tsnr)) +
+  geom_boxplot()
 
 ```
 
@@ -133,7 +134,10 @@ df <- df %>%
 
 ```{r item3}
 
-#### code for item 3 ####
+ggplot(df,aes(x = 'a thing', y = tsnr)) +
+  geom_boxplot() + 
+  geom_dotplot(color = "black", binaxis='y', binwidth = 1, stackdir='center')
+  # geom_jitter(width=0.05)
 
 ```
 
@@ -142,7 +146,9 @@ df <- df %>%
 
 ```{r item_4}
 
-#### code for item 4 ####
+ggplot(df,aes(x = task, y = tsnr)) +
+  geom_boxplot() + 
+  geom_dotplot(color = "black", binaxis='y', binwidth = 1, stackdir='center')
 
 ```
 
@@ -152,7 +158,8 @@ df <- df %>%
 
 ```{r item5}
 
-#### code for item 5 ####
+ggplot(df,aes(x = fd_mean, y = tsnr, color = task)) +
+  geom_point()
 
 ```
 
